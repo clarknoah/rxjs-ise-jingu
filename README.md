@@ -32,4 +32,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 1. Generate App
 > `ng new rxjs-ise-jingu`
-2. 
+2. Import FormsModule and ReactiveFormsModule into app.module
+3. Create a div which demonstrates the usage of a Subject, and displays the value of that subject.
+4. Create a div which demonstrates the usage of a BehaviorSubject
+5. Create a div which demonstrates the usage of an Observable which receives an array of subscribers

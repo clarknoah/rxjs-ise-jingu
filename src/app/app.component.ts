@@ -1,5 +1,8 @@
 import { Component, ElementRef , AfterViewInit} from '@angular/core';
 import {Observable, BehaviorSubject, Subject} from 'rxjs';
+import { DataService } from './data.service';
+import { Http, Response } from '@angular/http';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,13 +10,15 @@ import {Observable, BehaviorSubject, Subject} from 'rxjs';
 })
 export class AppComponent implements AfterViewInit {
   title = 'app';
+  dataServiceString: Observable<string>;
+  dataServiceStringMap: Observable<string>;
   inputVar: ElementRef;
   stringObservableSubscribeArray: any = [];
   stringObservable:Observable<string>;
   stringSubject: Subject<string> = new Subject();
   stringSubjectDisplay: string = "";
   stringBehaviorSubject: BehaviorSubject<string> = new BehaviorSubject('Frank');
-  constructor(private el: ElementRef){
+  constructor(private el: ElementRef, private dataService: DataService){
     this.stringSubject.next('Leah');
     this.stringObservable = Observable.create(
       (source)=>{
@@ -70,6 +75,19 @@ export class AppComponent implements AfterViewInit {
       )
     }
   //  this.stringObservable.next(value.value);
+  }
+
+  getString(){
+    this.dataService.getStringValue()
+      .subscribe(
+        (data)=>{
+          this.dataServiceString = data.json().title;
+        }
+      );
+  }
+
+  getStringMap(){
+    this.dataServiceStringMap = this.dataService.getStringValueMap();
   }
 
   addSubscriberToObservable(value){

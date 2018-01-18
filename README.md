@@ -36,3 +36,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 3. Create a div which demonstrates the usage of a Subject, and displays the value of that subject.
 4. Create a div which demonstrates the usage of a BehaviorSubject
 5. Create a div which demonstrates the usage of an Observable which receives an array of subscribers
+6. Create a div which demonstrates using a Service to receive an Observable that displays text
+7. Create a div which uses a Service which uses the .map function to parse the response object to text and display the value
+8. Create a div which contains an input that is an observable, which runs a filter function for a series of characters

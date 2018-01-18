@@ -43,3 +43,16 @@
   (click)="initializeObservable()" name="button">Initialize</button>
 
 </div>
+
+<div class="">
+  <h3>Data Service Observable String</h3>
+  <button (click)="getString()" name="button">Get String</button>
+  <pre>String: {{dataServiceString}}</pre>
+</div>
+
+
+<div class="">
+  <h3>Data Service Observable String Map</h3>
+  <button (click)="getStringMap()" name="button">Get String Map</button>
+  <pre>String: {{dataServiceStringMap | async}}</pre>
+</div>

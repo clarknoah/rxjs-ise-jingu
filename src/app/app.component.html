@@ -1,58 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="">
-  <h3>Plain Observable</h3>
-
-</div>
-
-<div style="text-align:center">
-
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-
-<input #inputVar type="text" id="inputVar">
-
-</div>
-
-<div class="">
- <h3>StringSubject</h3>
-    <input #stringVal type="'text'" name="" value="">
-    <button type="button" name="button"
-    (click)="updateStringSubject(stringVal)">Update Value</button>
-<pre>StringSubject: {{stringSubject.value}}</pre>
-<pre>StringSubjectDisplay: {{stringSubjectDisplay}}</pre>
-</div>
-
-<hr>
-<div class="">
-  <h3>StringBehaviorSubject</h3>
-  <input #value type="text" name="" value="">
-  <button type="button"
-  (click)="updateStringBehaviortSubject(value)" name="button">Update Value</button>
-  <pre>StringBehvaiorSubject: {{stringBehaviorSubject.value}}</pre>
-</div>
-
-<hr>
-<div class="">
-  <h3>StringObservable</h3>
-  <input #stringOb type="text" name="" value="">
-  <button type="button"
-  (click)="addSubscriberToObservable(stringOb)" name="button">Add Subscriber</button>
-
-  <button type="button"
-  (click)="initializeObservable()" name="button">Initialize</button>
-
-</div>
-
-<div class="">
-  <h3>Data Service Observable String</h3>
-  <button (click)="getString()" name="button">Get String</button>
-  <pre>String: {{dataServiceString}}</pre>
-</div>
-
-
-<div class="">
-  <h3>Data Service Observable String Map</h3>
-  <button (click)="getStringMap()" name="button">Get String Map</button>
-  <pre>String: {{dataServiceStringMap | async}}</pre>
-</div>
+<h1>RxJS-Ise-Jingue</h1>
+<ul>
+  <li><a [routerLink]="['/classes']">Classes</a></li>
+  <li><a [routerLink]="['/patterns']">Patterns</a></li>
+</ul>
+<router-outlet></router-outlet>

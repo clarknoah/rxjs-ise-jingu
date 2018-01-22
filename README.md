@@ -32,10 +32,39 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 1. Generate App
 > `ng new rxjs-ise-jingu`
-2. Import FormsModule and ReactiveFormsModule into app.module
-3. Create a div which demonstrates the usage of a Subject, and displays the value of that subject.
-4. Create a div which demonstrates the usage of a BehaviorSubject
+2. Import FormsModule, ReactiveFormsModule, and HttpModule, RouterModule, Routes into app.module
+2. Create components:
+> `ng g component home`
+> `ng g component classes`
+> `ng g component patterns`
+> `ng service operators`
+3. Setup Routing for **classes, patterns, and operators**
+```javascript
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: 'home', component: HomeComponent},
+  {path: 'patterns', component: PatternsComponent},
+  {path: 'classes', component: ClassesComponent},
+  {path: 'operators', component: OperatorsComponent}
+];
+```
+```html
+<ul>
+  <li><a [routerLink]="['/classes']">Classes</a></li>
+  <li><a [routerLink]="['/patterns']">Patterns</a></li>
+</ul>
+```
+2. Create Component for **Classes**
 5. Create a div which demonstrates the usage of an Observable which receives an array of subscribers
+3. Create a div which demonstrates the usage of a Subject, and displays the value of that subject. (uses next() operator)
+4. Create a div which demonstrates the usage of a BehaviorSubject
+5. Component **patterns**
+6. Create services **data**
 6. Create a div which demonstrates using a Service to receive an Observable that displays text
 7. Create a div which uses a Service which uses the .map function to parse the response object to text and display the value
 8. Create a div which contains an input that is an observable, which runs a filter function for a series of characters
+8. Create a div which receives an observable that uses the Operator services and runs publishLast.refCount()
+9. Create a div which observes the number of clicks on a button and uses an operator to aggregate the number of clicks
+10. Create a div which use an observable which uses the do() operator.

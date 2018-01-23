@@ -1,0 +1,23 @@
+<div class="">
+  <h3>Observable</h3>
+  <button type="button"
+  name="button"
+  (click)="subscribeToObservable()">Subscribe to Observable</button>
+  <pre *ngFor="let num of observedValue">{{num}}</pre>
+</div>
+
+<div class="">
+  <h3>Subject</h3>
+  <button type="button" name="button"
+  (click)="incrementSubjectValue()">Increment Subject Value</button>
+</div>
+
+<div class="">
+  <h3>BehaviorSubject</h3>
+  <pre>Current Value:{{behaviorSubject.value}}</pre>
+  <button
+  (click)="appendBehaviorSubject()"
+  type="button"
+  name="button">Append</button>
+  <pre *ngFor="let value of behaviorSubjectLog">{{value}}</pre>
+</div>

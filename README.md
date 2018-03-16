@@ -67,9 +67,14 @@ import 'rxjs/Rx';
 3. Create a div which demonstrates the usage of a Subject
 4. Create a div which demonstrates the usage of a BehaviorSubject
 5. Component **patterns**
-6. Create services **data**
-6. Create a div which demonstrates using a Service to receive an Observable that displays text
-7. Create a div which uses a Service which uses the .map function to parse the response object to text and display the value
+6. Create services **operators**
+5. Import Http, Observables, Subjects, and BehaviorSubjects, and All Operators to Service
+```javascript
+import { Http, Response } from '@angular/http';
+import { Observable, BehaviorSubject, Subject } from 'rxjs';
+import 'rxjs/Rx';
+```
+6. Create a div which demonstrates using a Service to receive an Observable that displays text, and uses map to convert response to json
 8. Create a div which contains an input that is an observable, which runs a filter function for a series of characters
 8. Create a div which receives an observable that uses the Operator services and runs publishLast.refCount()
 9. Create a div which observes the number of clicks on a button and uses an operator to aggregate the number of clicks
